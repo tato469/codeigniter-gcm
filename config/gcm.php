@@ -12,7 +12,8 @@
 |--------------------------------------------------------------------------
 | Get API Key: https://code.google.com/apis/console/
 */
-$config['gcm_api_key'] = '';
+$config['gcm_api_key_android'] = ''; //Android API key
+$config['gcm_api_key_ios'] = ''; //iOs API key
 
 
 /*
