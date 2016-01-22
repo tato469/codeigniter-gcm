@@ -1,9 +1,14 @@
 codeigniter-gcm
 ===============
 
+
+
 Codeigniter library for working with Google Cloud Messaging
 
-Based on code of c2dm package, (c) 2011 lytsing.org & 2012 thebub.net
+Based on https://github.com/antongorodezkiy/codeigniter-gcm
+
+***Changes:***
+- Added iOs and Android notifications. You can set the notification type for sending notifications to one or other device.
 
 
 Simple example of usage:
@@ -13,8 +18,13 @@ Simple example of usage:
 	public function send_gcm()
 	{
 		// simple loading
-		// note: you have to specify API key in config before
+		// note: you have to specify API key in config before (Android is set by default)
 			$this->load->library('gcm');
+			
+		//You can change to iOs
+			$this->gcm->setTypeiOs(true);
+		//Or you can still in Android
+			$this->gcm->setTypeAndroid();
 		
 		// simple adding message. You can also add message in the data,
 		// but if you specified it with setMesage() already
